@@ -1,6 +1,6 @@
 import objectAssign from 'object-assign';
 
-import {LOGIN, VALIDATE_USER_LOGIN} from './ActionTypes';
+import {LOGIN, LOGIN_SUCCESS, VALIDATE_USER_LOGIN_FORM} from './ActionTypes';
 import fieldsToValidate from './LoginValidator';
 import validator from '../validators';
 
@@ -23,11 +23,17 @@ export default function loginReducer(state = initialState.userLogin, action) {
 
       return newState;
 
-    case VALIDATE_USER_LOGIN:
+    case LOGIN_SUCCESS:
+      newState = objectAssign({}, state);
+      
+      return newState;
+
+    case VALIDATE_USER_LOGIN_FORM:
       newState = objectAssign({}, state, {
         pristine: false
       });
-      newState.errors = validator(fieldsToValidate, state); 
+      newState[action.fieldName] = action.value;
+      newState.errors = validator(fieldsToValidate, newState); 
       
       return newState;
 

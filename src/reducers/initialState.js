@@ -3,9 +3,10 @@ export default {
     username: '',
     password: ''
   },
+  user: {
 
+  },
   fuelSavings: {
-    hello: '',
     newMpg: '',
     tradeMpg: '',
     newPpg: '',

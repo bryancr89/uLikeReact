@@ -12,7 +12,7 @@ class LoginForm extends React.Component {
   }
   
   keypress(name, value) {
-    this.props.validateLogin(this.props.userLogin, name, value);
+    this.props.validateLoginForm(this.props.userLogin, name, value);
   }
 
   login() {
