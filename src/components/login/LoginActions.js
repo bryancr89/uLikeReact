@@ -1,5 +1,7 @@
 import * as types from './ActionTypes';
 import * as firebase from "firebase";
+import { browserHistory } from 'react-router'
+
 
 var config = {
   apiKey: "AIzaSyDfvqsCRcOlmwnPHH5QDN933DGnsCwmT88",
@@ -23,8 +25,8 @@ export function login(userLogin) {
       .then(function (result) {
         var token = result.credential.accessToken;
         var user = result.user;
-        debugger;
-        dispatch({type: types.LOGIN, user});
+        dispatch({type: types.LOGIN_SUCCESS, user});
+        browserHistory.push('/about')
       })
       .catch(function (error) {
         var errorCode = error.code;
@@ -35,6 +37,6 @@ export function login(userLogin) {
   };
 }
 
-export function validateLogin(userLogin, fieldName, value) {
-  return {type: types.VALIDATE_USER_LOGIN, userLogin, fieldName, value};
+export function validateLoginForm(userLogin, fieldName, value) {
+  return {type: types.VALIDATE_USER_LOGIN_FORM, userLogin, fieldName, value};
 }

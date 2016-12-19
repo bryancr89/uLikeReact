@@ -9,7 +9,7 @@ export const LoginPage = (props) => {
     <LoginForm
       login={props.actions.login}
       userLogin={props.userLogin}
-      validateLogin={props.actions.validateLogin}
+      validateLoginForm={props.actions.validateLoginForm}
     />
   );
 };

@@ -1,11 +1,9 @@
 import React, { PropTypes } from 'react';
 import { Link, IndexLink } from 'react-router';
 
-// This is a classNameName-based component because the current
-// version of hot reloading won't hot reload a stateless
-// component at the top-level.
 class App extends React.Component {
   render() {
+    console.log(this.props);
     return (
       <div className="demo-layout-waterfall mdl-layout mdl-js-layout">
         <header className="mdl-layout__header mdl-layout__header--waterfall">
@@ -22,6 +20,8 @@ class App extends React.Component {
               </label>
               <div className="mdl-textfield__expandable-holder">
                 <input className="mdl-textfield__input" type="text" name="sample" id="waterfall-exp"/>
+              </div>
+              <div>
               </div>
             </div>
           </div>
