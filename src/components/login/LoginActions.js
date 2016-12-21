@@ -1,16 +1,7 @@
-import * as types from './ActionTypes';
-import * as firebase from "firebase";
-import { browserHistory } from 'react-router'
+import * as types from './LoginActionTypes';
+import { browserHistory } from 'react-router';
 
-
-var config = {
-  apiKey: "AIzaSyDfvqsCRcOlmwnPHH5QDN933DGnsCwmT88",
-  authDomain: "ulike-25d9c.firebaseapp.com",
-  databaseURL: "https://ulike-25d9c.firebaseio.com",
-  storageBucket: "ulike-25d9c.appspot.com",
-  messagingSenderId: "392764699487"
-};
-firebase.initializeApp(config);
+import firebase from '../../services/firebase';
 
 // example of a thunk using the redux-thunk middleware
 export function login(userLogin) {

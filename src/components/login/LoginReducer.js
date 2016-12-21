@@ -1,6 +1,6 @@
 import objectAssign from 'object-assign';
 
-import {LOGIN, LOGIN_SUCCESS, VALIDATE_USER_LOGIN_FORM} from './ActionTypes';
+import {LOGIN, LOGIN_SUCCESS, VALIDATE_USER_LOGIN_FORM} from './LoginActionTypes';
 import fieldsToValidate from './LoginValidator';
 import validator from '../validators';
 

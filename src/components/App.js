@@ -3,7 +3,6 @@ import { Link, IndexLink } from 'react-router';
 
 class App extends React.Component {
   render() {
-    console.log(this.props);
     return (
       <div className="demo-layout-waterfall mdl-layout mdl-js-layout">
         <header className="mdl-layout__header mdl-layout__header--waterfall">
@@ -32,6 +31,7 @@ class App extends React.Component {
             <nav className="mdl-navigation">
               <Link to="/login" className="mdl-navigation__link">login1</Link>
               <Link to="/fuel-savings" className="mdl-navigation__link">Demo App</Link>
+              <Link to="/movies" className="mdl-navigation__link">Movies</Link>
               <Link to="/about" className="mdl-navigation__link">About</Link>
             </nav>
           </div>
@@ -41,6 +41,7 @@ class App extends React.Component {
           <nav className="mdl-navigation">
             <Link to="/login" className="mdl-navigation__link">login1</Link>
             <Link to="/fuel-savings" className="mdl-navigation__link">Demo App</Link>
+            <Link to="/movies" className="mdl-navigation__link">Movies</Link>
             <Link to="/about" className="mdl-navigation__link">About</Link>
           </nav>
         </div>
